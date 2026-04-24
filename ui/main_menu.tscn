@@ -4,6 +4,7 @@
 [ext_resource type="SystemFont" uid="uid://by5yifq7g6pa" path="res://assets/fonts/rage.tres" id="2_rmr83"]
 [ext_resource type="Theme" uid="uid://c7uno5efw1req" path="res://assets/themes/play_button.tres" id="3_8uxxo"]
 [ext_resource type="Theme" uid="uid://b02rsvjetkg0" path="res://assets/themes/quit_button.tres" id="4_rmr83"]
+[ext_resource type="Script" uid="uid://cho3g13ljp2q7" path="res://scripts/ui/quit_crash.gd" id="5_8uxxo"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ei257"]
 font = ExtResource("2_rmr83")
@@ -242,6 +243,7 @@ layout_mode = 2
 size_flags_vertical = 4
 theme = ExtResource("4_rmr83")
 text = "Quit"
+script = ExtResource("5_8uxxo")
 
 [node name="Quote" type="Label" parent="." unique_id=575090062]
 layout_mode = 1
@@ -260,3 +262,14 @@ rotation = -0.08901179
 text = "Damned by our saviors.
        Down we will fall."
 label_settings = SubResource("LabelSettings_rmr83")
+
+[node name="Errors" type="Window" parent="." unique_id=1993079700]
+oversampling_override = 1.0
+title = "Error"
+initial_position = 1
+visible = false
+
+[node name="ErrorPopup" type="Popup" parent="Errors" unique_id=890237988]
+oversampling_override = 1.0
+title = "Error"
+initial_position = 1
