@@ -1,0 +1,4 @@
+[gd_resource type="SystemFont" format=3 uid="uid://by5yifq7g6pa"]
+
+[resource]
+font_names = PackedStringArray("Liberation Mono")
