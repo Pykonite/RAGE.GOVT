@@ -34,6 +34,7 @@ grow_vertical = 2
 color = Color(0.6431373, 0.08627451, 0.09019608, 1)
 
 [node name="Strips" type="Control" parent="." unique_id=7108626]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -262,14 +263,3 @@ rotation = -0.08901179
 text = "Damned by our saviors.
        Down we will fall."
 label_settings = SubResource("LabelSettings_rmr83")
-
-[node name="Errors" type="Window" parent="." unique_id=1993079700]
-oversampling_override = 1.0
-title = "Error"
-initial_position = 1
-visible = false
-
-[node name="ErrorPopup" type="Popup" parent="Errors" unique_id=890237988]
-oversampling_override = 1.0
-title = "Error"
-initial_position = 1
