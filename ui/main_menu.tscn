@@ -9,6 +9,11 @@
 font = ExtResource("2_rmr83")
 font_size = 128
 
+[sub_resource type="LabelSettings" id="LabelSettings_rmr83"]
+font = ExtResource("2_rmr83")
+font_size = 24
+font_color = Color(0.9671491, 0.7514934, 0.7162857, 1)
+
 [node name="MainMenu" type="Control" unique_id=542711258]
 layout_mode = 3
 anchors_preset = 15
@@ -17,6 +22,169 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_wk0pr")
+
+[node name="Background" type="ColorRect" parent="." unique_id=515024675]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.6431373, 0.08627451, 0.09019608, 1)
+
+[node name="Strips" type="Control" parent="." unique_id=7108626]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Strip" type="ColorRect" parent="Strips" unique_id=1611829281]
+layout_mode = 0
+offset_left = -57.0
+offset_top = 287.0371
+offset_right = 1143.0
+offset_bottom = 297.0371
+rotation = -0.14644599
+scale = Vector2(1.0395722, 1)
+mouse_filter = 2
+
+[node name="Strip2" type="ColorRect" parent="Strips" unique_id=1436954627]
+layout_mode = 0
+offset_left = -57.0
+offset_top = 347.0371
+offset_right = 1143.0
+offset_bottom = 357.0371
+rotation = -0.14644599
+scale = Vector2(1.0395722, 1)
+mouse_filter = 2
+
+[node name="Strip3" type="ColorRect" parent="Strips" unique_id=1279385670]
+layout_mode = 0
+offset_left = -54.0
+offset_top = 167.03711
+offset_right = 1146.0
+offset_bottom = 177.03711
+rotation = -0.14644599
+scale = Vector2(1.0395722, 1)
+mouse_filter = 2
+
+[node name="Strip4" type="ColorRect" parent="Strips" unique_id=1979818320]
+layout_mode = 0
+offset_left = -54.0
+offset_top = 227.03711
+offset_right = 1146.0
+offset_bottom = 237.03711
+rotation = -0.14644599
+scale = Vector2(1.0395722, 1)
+mouse_filter = 2
+
+[node name="Strip5" type="ColorRect" parent="Strips" unique_id=109618740]
+layout_mode = 0
+offset_left = -94.0
+offset_top = 59.037117
+offset_right = 1106.0
+offset_bottom = 69.03712
+rotation = -0.14644599
+scale = Vector2(1.0395722, 1)
+mouse_filter = 2
+
+[node name="Strip6" type="ColorRect" parent="Strips" unique_id=417719075]
+layout_mode = 0
+offset_left = -94.0
+offset_top = 119.03712
+offset_right = 1106.0
+offset_bottom = 129.03711
+rotation = -0.14644599
+scale = Vector2(1.0395722, 1)
+mouse_filter = 2
+
+[node name="Strip7" type="ColorRect" parent="Strips" unique_id=269862435]
+layout_mode = 0
+offset_left = -23.000008
+offset_top = 407.03708
+offset_right = 1177.0
+offset_bottom = 417.03708
+rotation = -0.14644599
+scale = Vector2(1.0395722, 1)
+mouse_filter = 2
+
+[node name="Strip8" type="ColorRect" parent="Strips" unique_id=207388117]
+layout_mode = 0
+offset_left = -23.000008
+offset_top = 467.03708
+offset_right = 1177.0
+offset_bottom = 477.03708
+rotation = -0.14644599
+scale = Vector2(1.0395722, 1)
+mouse_filter = 2
+
+[node name="Strip9" type="ColorRect" parent="Strips" unique_id=42454638]
+layout_mode = 0
+offset_left = -14.000001
+offset_top = 530.0371
+offset_right = 1186.0
+offset_bottom = 540.0371
+rotation = -0.14644599
+scale = Vector2(1.0395722, 1)
+mouse_filter = 2
+
+[node name="Strip10" type="ColorRect" parent="Strips" unique_id=1714836652]
+layout_mode = 0
+offset_left = -14.000001
+offset_top = 590.0371
+offset_right = 1186.0
+offset_bottom = 600.0371
+rotation = -0.14644599
+scale = Vector2(1.0395722, 1)
+mouse_filter = 2
+
+[node name="Strip11" type="ColorRect" parent="Strips" unique_id=789732851]
+layout_mode = 0
+offset_left = 5.999997
+offset_top = 647.0371
+offset_right = 1206.0
+offset_bottom = 657.0371
+rotation = -0.14644599
+scale = Vector2(1.0395722, 1)
+mouse_filter = 2
+
+[node name="Strip12" type="ColorRect" parent="Strips" unique_id=1494445642]
+layout_mode = 0
+offset_left = 5.999997
+offset_top = 707.0371
+offset_right = 1206.0
+offset_bottom = 717.0371
+rotation = -0.14644599
+scale = Vector2(1.0395722, 1)
+mouse_filter = 2
+
+[node name="Strip13" type="ColorRect" parent="Strips" unique_id=726356867]
+layout_mode = 0
+offset_left = 170.99998
+offset_top = 744.0371
+offset_right = 1371.0
+offset_bottom = 754.0371
+rotation = -0.14644599
+scale = Vector2(1.0395722, 1)
+mouse_filter = 2
+
+[node name="Strip14" type="ColorRect" parent="Strips" unique_id=254150164]
+layout_mode = 0
+offset_left = 170.99998
+offset_top = 804.0371
+offset_right = 1371.0
+offset_bottom = 814.0371
+rotation = -0.14644599
+scale = Vector2(1.0395722, 1)
+mouse_filter = 2
+
+[node name="Background2" type="ColorRect" parent="." unique_id=1414784309]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.6431373, 0.08627451, 0.09019608, 0.6862745)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1447938080]
 layout_mode = 1
@@ -74,3 +242,21 @@ layout_mode = 2
 size_flags_vertical = 4
 theme = ExtResource("4_rmr83")
 text = "Quit"
+
+[node name="Quote" type="Label" parent="." unique_id=575090062]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 118.0
+offset_top = 56.0
+offset_right = 475.0
+offset_bottom = 123.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.08901179
+text = "Damned by our saviors.
+       Down we will fall."
+label_settings = SubResource("LabelSettings_rmr83")
