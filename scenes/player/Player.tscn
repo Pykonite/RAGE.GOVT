@@ -1,3 +1,538 @@
 [gd_scene format=3 uid="uid://26h3enyxctw1"]
 
-[node name="Player" type="CharacterBody3D" unique_id=507681331]
+[ext_resource type="Script" uid="uid://bxmuusx5lmwjh" path="res://scenes/player/player.gd" id="1_8afob"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dovo2"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_gmlin"]
+
+[sub_resource type="Animation" id="Animation_8afob"]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape3D:shape:height")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance3D:mesh:height")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CameraHolder:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.5, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MeshInstance3D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape3D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CameraHolder:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("RightHand:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.5, 0.2, -0.5)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CameraHolder/Camera3D:current")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("RightHand/Scope:current")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_dovo2"]
+resource_name = "crouch"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape3D:shape:height")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance3D:mesh:height")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CameraHolder:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -0.15, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MeshInstance3D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -0.4, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape3D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -0.4, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_gmlin"]
+resource_name = "head_tilt"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CameraHolder:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0.2617994)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CameraHolder:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1, 0.4, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape3D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.5, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MeshInstance3D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.5, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_lvxji"]
+resource_name = "head_tilt"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CameraHolder:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, -0.2617994)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CameraHolder:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 0.4, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape3D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.5, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MeshInstance3D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.5, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_p47bc"]
+resource_name = "movement"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CameraHolder:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0.5, 0), Vector3(0, 0.6, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance3D:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qek5x"]
+resource_name = "scope"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RightHand:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.19999999),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.5, 0.2, -0.5), Vector3(0.1, 0.4, -0.6)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CameraHolder/Camera3D:current")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.19, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RightHand/Scope:current")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.19, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, true]
+}
+
+[sub_resource type="Animation" id="Animation_75vfm"]
+resource_name = "walk_tilt_l"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CameraHolder:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0.10471976)]
+}
+
+[sub_resource type="Animation" id="Animation_0owmy"]
+resource_name = "walk_tilt_r"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CameraHolder:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, -0.10471976)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gmlin"]
+_data = {
+&"RESET": SubResource("Animation_8afob"),
+&"crouch": SubResource("Animation_dovo2"),
+&"head_tilt_l": SubResource("Animation_gmlin"),
+&"head_tilt_r": SubResource("Animation_lvxji"),
+&"movement": SubResource("Animation_p47bc"),
+&"scope": SubResource("Animation_qek5x"),
+&"walk_tilt_l": SubResource("Animation_75vfm"),
+&"walk_tilt_r": SubResource("Animation_0owmy")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8afob"]
+animation = &"crouch"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dovo2"]
+animation = &"RESET"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_gmlin"]
+animation = &"movement"
+use_custom_timeline = true
+timeline_length = 1.0
+stretch_time_scale = true
+start_offset = 0.0
+loop_mode = 1
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_lvxji"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_8afob"]
+
+[sub_resource type="Curve" id="Curve_8afob"]
+_data = [Vector2(0, 0), 0.0, 1.0, 0, 1, Vector2(1, 1), 1.0, 0.0, 1, 0]
+point_count = 2
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_lvxji"]
+xfade_time = 0.1
+xfade_curve = SubResource("Curve_8afob")
+input_0/name = "RESET"
+input_0/auto_advance = false
+input_0/break_loop_at_end = false
+input_0/reset = true
+input_1/name = "Crouch"
+input_1/auto_advance = false
+input_1/break_loop_at_end = false
+input_1/reset = true
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_8afob"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_75vfm"]
+animation = &"head_tilt_l"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0owmy"]
+animation = &"RESET"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qek5x"]
+animation = &"head_tilt_r"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_5gtgg"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_75vfm")
+blend_point_0/pos = -1.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_0owmy")
+blend_point_1/pos = 0.0
+blend_point_2/node = SubResource("AnimationNodeAnimation_qek5x")
+blend_point_2/pos = 1.0
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lvxji"]
+animation = &"walk_tilt_l"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_p47bc"]
+animation = &"walk_tilt_r"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_75vfm"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_lvxji")
+blend_point_0/pos = -1.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_p47bc")
+blend_point_1/pos = 1.0
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_p47bc"]
+graph_offset = Vector2(-356.4429, 269.17438)
+nodes/output/position = Vector2(1160, -40)
+nodes/Animation/node = SubResource("AnimationNodeAnimation_dovo2")
+nodes/Animation/position = Vector2(180, -40)
+"nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_8afob")
+"nodes/Animation 2/position" = Vector2(180, 180)
+nodes/crouch_check/node = SubResource("AnimationNodeTransition_lvxji")
+nodes/crouch_check/position = Vector2(440, -40)
+nodes/tilt_head/node = SubResource("AnimationNodeBlendSpace1D_5gtgg")
+nodes/tilt_head/position = Vector2(180, 400)
+nodes/crouch_and_tilt/node = SubResource("AnimationNodeAdd2_8afob")
+nodes/crouch_and_tilt/position = Vector2(680, -40)
+nodes/add_movement/node = SubResource("AnimationNodeAdd2_lvxji")
+nodes/add_movement/position = Vector2(920, -40)
+nodes/Movement/node = SubResource("AnimationNodeAnimation_gmlin")
+nodes/Movement/position = Vector2(680, 260)
+nodes/tilt_blend/node = SubResource("AnimationNodeBlend2_8afob")
+nodes/tilt_blend/position = Vector2(440, 240)
+nodes/tilt_walk/node = SubResource("AnimationNodeBlendSpace1D_75vfm")
+nodes/tilt_walk/position = Vector2(180, 640)
+node_connections = [&"output", 0, &"add_movement", &"crouch_check", 0, &"Animation", &"crouch_check", 1, &"Animation 2", &"crouch_and_tilt", 0, &"crouch_check", &"crouch_and_tilt", 1, &"tilt_blend", &"add_movement", 0, &"crouch_and_tilt", &"add_movement", 1, &"Movement", &"tilt_blend", 0, &"tilt_head", &"tilt_blend", 1, &"tilt_walk"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_8afob"]
+radius = 0.1
+height = 0.2
+
+[node name="Player" type="CharacterBody3D" unique_id=1499146687]
+script = ExtResource("1_8afob")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=686609132]
+shape = SubResource("CapsuleShape3D_dovo2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1092492315]
+mesh = SubResource("CapsuleMesh_gmlin")
+
+[node name="CameraHolder" type="Node3D" parent="." unique_id=663362299]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CameraHolder" unique_id=957718588]
+current = true
+
+[node name="3PSCam" type="Camera3D" parent="." unique_id=91400934]
+transform = Transform3D(1, 0, 0, 0, 0.90064514, 0.4345553, 0, -0.4345553, 0.90064514, 0, 1.2799816, 2.661077)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=260595886]
+libraries/ = SubResource("AnimationLibrary_gmlin")
+
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=758951047]
+tree_root = SubResource("AnimationNodeBlendTree_p47bc")
+anim_player = NodePath("../AnimationPlayer")
+parameters/crouch_check/current_state = "RESET"
+parameters/crouch_check/transition_request = ""
+parameters/crouch_check/current_index = 0
+parameters/tilt_head/blend_position = 0.0
+parameters/crouch_and_tilt/add_amount = 1.0
+parameters/add_movement/add_amount = 0.0
+parameters/tilt_blend/blend_amount = 1.0
+parameters/tilt_walk/blend_position = 0.0
+
+[node name="LeftHand" type="Node3D" parent="." unique_id=2093871772]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.2, -0.5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LeftHand" unique_id=412040523]
+cast_shadow = 0
+mesh = SubResource("SphereMesh_8afob")
+
+[node name="RightHand" type="Node3D" parent="." unique_id=810053877]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.2, -0.5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RightHand" unique_id=1759473050]
+cast_shadow = 0
+mesh = SubResource("SphereMesh_8afob")
+
+[node name="Scope" type="Camera3D" parent="RightHand" unique_id=69212784]
